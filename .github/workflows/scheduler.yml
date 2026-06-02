@@ -1,0 +1,10 @@
+name: Scheduler Job
+on: 
+  schedule:
+    - cron: '* * * * *'
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: schedule job
+        run: "The server time is $(date)"

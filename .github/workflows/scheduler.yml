@@ -1,10 +1,13 @@
 name: Scheduler Job
-on: 
+
+on:
   schedule:
     - cron: '*/5 * * * *'
+  workflow_dispatch:
+
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: schedule job
-        run: "The server time is $(date)"
+      - name: Print time
+        run: echo "The server time is $(date)"

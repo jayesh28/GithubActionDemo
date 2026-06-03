@@ -1,8 +1,8 @@
 name: Scheduler Job
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  # schedule:
+  #   - cron: '*/5 * * * *'
   workflow_dispatch:
     inputs:
       app-name:
@@ -24,3 +24,7 @@ jobs:
     steps:
       - name: Print time
         run: echo "The server time is $(date)"
+      - name: print app-name
+        run: |
+          echo "application name is ${{inputs.app-name}}"
+          echo "version is ${{inputs.version}}"

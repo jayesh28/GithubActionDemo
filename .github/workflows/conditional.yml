@@ -2,7 +2,7 @@ name: conditional-example
 on: [push]
 jobs:
   hello-world:
-    if: github.repository == 'jayesh28/GithubActionDemo'
+    if: github.repository == 'jayesh28/GithubActionDemo-test'
     runs-on: ubuntu-latest
     steps:
       - name: "Hello World"

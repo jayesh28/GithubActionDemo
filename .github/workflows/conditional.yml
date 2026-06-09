@@ -1,0 +1,14 @@
+name: conditional-example
+on: [push]
+jobs:
+  hello-world:
+    if: github.repository == 'jayesh28/GithubActionDemo'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Hello World"
+        run: echo "Hello World !"
+  good-bye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Goodbye Moon"
+        run: echo "Goodbye Moon!"
